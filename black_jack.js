@@ -20,3 +20,10 @@ function Card(n, s) {
         }
     };
 }
+
+var deal = function () {
+    var randNum = Math.floor(Math.random() * 13) + 1;
+    var randSuit = Math.floor(Math.random() * 4) + 1;
+    //the card
+    return new Card(randNum, randSuit);
+};
