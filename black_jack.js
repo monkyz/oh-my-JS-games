@@ -29,3 +29,11 @@ var deal = function(){
         //the card
         return new Card(randNum, randSuit);
 };
+function Hand(){
+var card1 = deal();
+var card2 = deal();
+var cards = [card1, card2];
+
+    this.getHand = function() {
+return cards;
+};
