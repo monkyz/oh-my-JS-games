@@ -23,12 +23,7 @@ var deal = function () {
     //the card
     return new Card(randNum, randSuit);
 };
-var deal = function(){
-        var randNum = Math.floor(Math.random() * 13) + 1;
-        var randSuit = Math.floor(Math.random() * 4) + 1;
-        //the card
-        return new Card(randNum, randSuit);
-};
+
 function Hand(){
 var card1 = deal();
 var card2 = deal();
@@ -37,3 +32,6 @@ var cards = [card1, card2];
     this.getHand = function() {
 return cards;
 };
+this.score = function(){
+var sum = 0;
+numberOfAces = 0;
