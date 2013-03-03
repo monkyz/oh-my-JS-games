@@ -24,14 +24,14 @@ var deal = function () {
     return new Card(randNum, randSuit);
 };
 
-function Hand(){
-var card1 = deal();
-var card2 = deal();
-var cards = [card1, card2];
+function Hand() {
+    var card1 = deal();
+    var card2 = deal();
+    var cards = [card1, card2];
 
-    this.getHand = function() {
-return cards;
-};
-this.score = function(){
-var sum = 0;
-numberOfAces = 0;
+    this.getHand = function () {
+        return cards;
+    };
+    this.score = function () {
+        var sum = 0;
+        numberOfAces = 0;
