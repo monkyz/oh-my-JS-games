@@ -35,3 +35,17 @@ function Hand() {
     this.score = function () {
         var sum = 0;
         numberOfAces = 0;
+        for(i=0; i < cards.length; i++){
+
+    if ( cards[i].getValue() === 11 ) {
+                numberOfAces++;
+            }
+            sum += cards[i].getValue();
+
+while( sum > 21 ) {
+                numberOfAces--;
+                sum -= 10;
+            }
+}
+return sum;
+};
