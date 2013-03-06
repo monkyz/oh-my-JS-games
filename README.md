@@ -7,3 +7,6 @@ Here at Gran Casino JS you can find all the best games. Blackjack, roulette, dic
 enjoy your stay!
 
 Game 1: Traditional Blackjack
+
+Game 2: Dice Game
+
