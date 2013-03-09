@@ -20,7 +20,6 @@ function Card(n, s) {
 var deal = function () {
     var randNum = Math.floor(Math.random() * 13) + 1;
     var randSuit = Math.floor(Math.random() * 4) + 1;
-    //the card
     return new Card(randNum, randSuit);
 };
 
@@ -35,17 +34,30 @@ function Hand() {
     this.score = function () {
         var sum = 0;
         numberOfAces = 0;
-        for(i=0; i < cards.length; i++){
+        for (i = 0; i < cards.length; i++) {
 
-    if ( cards[i].getValue() === 11 ) {
+            if (cards[i].getValue() === 11) {
                 numberOfAces++;
             }
             sum += cards[i].getValue();
 
-while( sum > 21 ) {
+            while (sum > 21) {
                 numberOfAces--;
                 sum -= 10;
             }
-}
-return sum;
-};
+        }
+        return sum;
+    };
+
+    this.printHand = function () {
+        var string = "";
+
+        for (i = 0; i < cards.length; i += 1) {
+            string += cards[i].getNumber() + " of " + cards[i].getSuit();
+
+            if (i < cards.length - 1) {
+                string += ", ";
+            }
+        }
+        return string;
+    };
