@@ -66,3 +66,11 @@ function Hand() {
         cards.push(moreCards);
     };
 }
+var playAsDealer = function() {
+    var dealerHand = new Hand();
+
+    while( dealerHand.score() < 17 ) {
+        dealerHand.hitMe();
+    }
+return dealerHand.printHand();
+};
