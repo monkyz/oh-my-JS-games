@@ -61,3 +61,8 @@ function Hand() {
         }
         return string;
     };
+    this.hitMe = function () {
+        var moreCards = deal();
+        cards.push(moreCards);
+    };
+}
