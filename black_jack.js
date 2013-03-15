@@ -1,3 +1,4 @@
+//this is the constructor for all cards
 function Card(n, s) {
     var number = n;
     var suit = s;
