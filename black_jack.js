@@ -1,10 +1,14 @@
 //this is the constructor for all cards
 function Card(n, s) {
+    //the card number
     var number = n;
+    //the card suit
     var suit = s;
+    //getter for the card number
     this.getNumber = function () {
         return number;
     };
+    //getter for the suit
     this.getSuit = function () {
         return suit;
     };
