@@ -12,6 +12,7 @@ function Card(n, s) {
     this.getSuit = function () {
         return suit;
     };
+    //get the correct value of the number
     this.getValue = function () {
         if (number > 10) {
             return 10;
