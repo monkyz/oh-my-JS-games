@@ -23,9 +23,13 @@ function Card(n, s) {
         }
     };
 }
+//the deal() function generates new Card objects
 var deal = function () {
+    //generate a random card number between 1 and 13
     var randNum = Math.floor(Math.random() * 13) + 1;
+    //generate a random suit 
     var randSuit = Math.floor(Math.random() * 4) + 1;
+    //returns the card
     return new Card(randNum, randSuit);
 };
 
