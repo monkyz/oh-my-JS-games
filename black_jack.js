@@ -32,8 +32,9 @@ var deal = function () {
     //returns the card
     return new Card(randNum, randSuit);
 };
-
+// the constructor for hand objects
 function Hand() {
+    //define 2 cards for the hand
     var card1 = deal();
     var card2 = deal();
     var cards = [card1, card2];
