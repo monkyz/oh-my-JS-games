@@ -37,6 +37,7 @@ function Hand() {
     //define 2 cards for the hand
     var card1 = deal();
     var card2 = deal();
+    //array that stores both generated cards
     var cards = [card1, card2];
 
     this.getHand = function () {
