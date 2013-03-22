@@ -10,3 +10,21 @@ Game 1: Blackjack
 
 Game 2: Dice Game
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MIT license
