@@ -1,12 +1,12 @@
-Gran-Casino-JS
+Gran Casino Royale
 ==============
 
-A casino game programmed only with javascript
+A cross browser/mobile casino game. Works on Android, Ipad, Iphone and PC.
 
-Here at Gran Casino JS you can find all the best games. Blackjack, roulette, dice game and many others! Welcome,
+Here at Gran Casino Royale, you can find all the best games. Blackjack, roulette, dice game and many others! Welcome,
 enjoy your stay!
 
-Game 1: Traditional Blackjack
+Game 1: Blackjack
 
 Game 2: Dice Game
 
