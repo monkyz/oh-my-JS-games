@@ -86,3 +86,14 @@ var playAsDealer = function() {
     }
 return dealerHand.printHand();
 };
+
+var playAsUser = function() {
+var userHand = new Hand();
+var decision = confirm("hand:"+ userHand.printHand() + ": OK/hit Cancel/stand");
+while (decision) {
+        userHand.hitMe();
+        decision = confirm("OK to hit: " + userHand.printHand());
+    }
+return userHand;
+};
+
