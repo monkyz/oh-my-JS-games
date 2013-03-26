@@ -5,15 +5,15 @@ function Card(n, s) {
     //the card suit
     var suit = s;
     //getter for the card number
-    this.getNumber = function () {
+    this.getNumber = function() {
         return number;
     };
     //getter for the suit
-    this.getSuit = function () {
+    this.getSuit = function() {
         return suit;
     };
     //get the correct value of the number
-    this.getValue = function () {
+    this.getValue = function() {
         if (number > 10) {
             return 10;
         } else if (number === 1) {
@@ -24,7 +24,7 @@ function Card(n, s) {
     };
 }
 //the deal() function generates new Card objects
-var deal = function () {
+var deal = function() {
     //generate a random card number between 1 and 13
     var randNum = Math.floor(Math.random() * 13) + 1;
     //generate a random suit 
@@ -40,10 +40,10 @@ function Hand() {
     //array that stores both generated cards
     var cards = [card1, card2];
 
-    this.getHand = function () {
+    this.getHand = function() {
         return cards;
     };
-    this.score = function () {
+    this.score = function() {
         var sum = 0;
         numberOfAces = 0;
         for (i = 0; i < cards.length; i++) {
@@ -61,11 +61,24 @@ function Hand() {
         return sum;
     };
 
-    this.printHand = function () {
+    this.printHand = function() {
         var string = "";
-
-        for (i = 0; i < cards.length; i += 1) {
-            string += cards[i].getNumber() + " of " + cards[i].getSuit();
+        var prettySuit;
+        for (i = 0; i < cards.length; i++) {
+            prettySuit = cards[i].getSuit();
+            if (prettySuit === 1) {
+                prettySuit = "Clubs";
+            }
+            if (prettySuit === 2) {
+                prettySuit = "Diamonds";
+            }
+            if (prettySuit === 3) {
+                prettySuit = "Hearts";
+            }
+            if (prettySuit === 4) {
+                prettySuit = "Spades";
+            }
+            string += cards[i].getNumber() + " of " + prettySuit;
 
             if (i < cards.length - 1) {
                 string += ", ";
@@ -73,7 +86,8 @@ function Hand() {
         }
         return string;
     };
-    this.hitMe = function () {
+
+    this.hitMe = function() {
         var moreCards = deal();
         cards.push(moreCards);
     };
@@ -81,19 +95,18 @@ function Hand() {
 var playAsDealer = function() {
     var dealerHand = new Hand();
 
-    while( dealerHand.score() < 17 ) {
+    while (dealerHand.score() < 17) {
         dealerHand.hitMe();
     }
-return dealerHand.printHand();
+    return dealerHand.printHand();
 };
 
 var playAsUser = function() {
-var userHand = new Hand();
-var decision = confirm("hand:"+ userHand.printHand() + ": OK/hit Cancel/stand");
-while (decision) {
+    var userHand = new Hand();
+    var decision = confirm("hand:" + userHand.printHand() + ": OK/hit Cancel/stand");
+    while (decision) {
         userHand.hitMe();
         decision = confirm("OK to hit: " + userHand.printHand());
     }
-return userHand;
+    return userHand;
 };
-
