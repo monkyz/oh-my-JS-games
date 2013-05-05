@@ -1,13 +1,13 @@
-Gran Casino Royale
-==============
-
-Here at Gran Casino Royale, you can find all the best games. Blackjack, roulette, dice game and many others! Welcome,
-enjoy your stay!
+My JS Games
+=============
+These games are 100% Javascript, with a lil html/css. Enjoy! These games are under the CC0 license,
+http://creativecommons.org/about/cc0
 
 Game 1: Blackjack
 
 Game 2: Dice Game
 
+much more...you are invited to fork and add more games!
 ...
 
 todo: 
@@ -16,7 +16,6 @@ probably backbone on the client
 add multiplayer support
 ---------------------------------------
 
-right now Im building the logic of blackjack. Soon I will add a client side code.
 
 
 
